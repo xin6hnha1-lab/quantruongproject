@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Final Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Final Project - Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -11,28 +13,56 @@
     </header>
 
     <main>
-        <h2>About My Project</h2>
-        <p>This is a simple HTML page built for the final assignment.</p>
+        <section class="about-section">
+            <h2>About My Project</h2>
+            <p>This is an interactive HTML page built for the final assignment.</p>
 
-        <h3>My Top Three Hobbies</h3>
-        <ul>
-            <li>Web Development</li>
-            <li>Music Production</li>
-            <li>Gaming</li>
-        </ul>
+            <h3>My Top Three Hobbies</h3>
+            <ul class="hobbies-list">
+                <li>Web Development</li>
+                <li>Music Production</li>
+                <li>Gaming</li>
+            </ul>
+        </section>
 
-        <h3>Image Gallery</h3>
-        <p><img src="image1.jpg" alt="A laptop on a wooden desk showing lines of code"></p>
-        <p><img src="image2.jpg" alt="A pair of headphones next to a music keyboard"></p>
-        <p><img src="image3.jpg" alt="A modern gaming controller setup on a table"></p>
+        <section class="gallery-section">
+            <h3>Interactive Image Gallery</h3>
+            
+            <div id="image">
+                Hover over an image below to display here.
+            </div>
 
-        <h3>External Link</h3>
-        <p>Visit <a href="https://www.w3schools.com" target="_blank">W3Schools Website</a> for more tutorials.</p>
+            <div class="preview-container">
+                <img class="preview" 
+                     src="image1.jpg" 
+                     alt="A laptop on a wooden desk showing lines of code" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="undo()">
+                
+                <img class="preview" 
+                     src="image2.jpg" 
+                     alt="A pair of headphones next to a music keyboard" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="undo()">
+                
+                <img class="preview" 
+                     src="image3.jpg" 
+                     alt="A modern gaming controller setup on a table" 
+                     onmouseover="upDate(this)" 
+                     onmouseout="undo()">
+            </div>
+        </section>
+
+        <section class="links-section">
+            <h3>External Link</h3>
+            <p>Visit <a href="https://www.w3schools.com" target="_blank" class="styled-link">W3Schools Website</a> for more tutorials.</p>
+        </section>
     </main>
 
     <footer>
         <p>Copyright 2026 Personal Portfolio</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
